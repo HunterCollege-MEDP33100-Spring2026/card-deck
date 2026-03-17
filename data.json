@@ -1,7 +1,32 @@
 [
     {
-        "name": "Card Name",
-        "description": "Card description goes here.",
-        "image": "images/placeholder.png"
+        "name": "Love",
+        "description": "Spread love",
+        "image": "images/love.png"
+    },
+    {
+        "name": "Succession",
+        "description": "Career Success",
+        "image": "images/succession.png"
+    },
+    {
+        "name": "Peace",
+        "description": "Nature Lover",
+        "image": "images/peace.png"
+    },
+    {
+        "name": "Justice",
+        "description": "Equal for everone",
+        "image": "images/justice.png"
+    },
+    {
+        "name": "Caring",
+        "description": "Caring and Sharing",
+        "image": "images/caring.png"
+    },
+    {
+        "name": "Royal",
+        "description": "Born with Fame",
+        "image": "images/royal.png"
     }
 ]
