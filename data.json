@@ -1,7 +1,38 @@
 [
-    {
-        "name": "Card Name",
-        "description": "Card description goes here.",
-        "image": "images/placeholder.png"
-    }
+  {
+    "name": "Monkey D. Luffy",
+    "trait": "Freedom",
+    "series": "One Piece",
+    "image": "images/luffy.png"
+  },
+  {
+    "name": "Naruto Uzumaki",
+    "trait": "Perseverance",
+    "series": "Naruto",
+    "image": "images/naruto.png"
+  },
+  {
+    "name": "Levi Ackerman",
+    "trait": "Discipline",
+    "series": "Attack on Titan",
+    "image": "images/levi.png"
+  },
+  {
+    "name": "Satoru Gojo",
+    "trait": "Confidence",
+    "series": "Jujutsu Kaisen",
+    "image": "images/gojo.png"
+  },
+  {
+    "name": "Hinata Shoyo",
+    "trait": "Ambition",
+    "series": "Haikyuu!!",
+    "image": "images/hinata.png"
+  },
+  {
+    "name": "Tanjiro Kamado",
+    "trait": "Compassion",
+    "series": "Demon Slayer",
+    "image": "images/tanjiro.png"
+  }
 ]

@@ -1,35 +1,45 @@
 const deck = document.querySelector('.deck');
 
-/*
-    Step 1: Fetch data from your JSON file by:
-    - Inside of the getCards() function, use fetch() to load data.json
-    - Convert the response to JavaScript using .json()
-    - Call displayCards() with the data
-*/
-
 function getCards() {
-    // Your code here for Step 1
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            displayCards(data);
+        })
+        .catch(error => {
+            console.log('Error loading cards:', error);
+        });
 }
-
-
-/*
-    Step 2: Display the cards
-    - Inside the for loop, loop through the array of card objects
-    - For each card, create HTML elements (using div, p, img, etc.)
-    - Append each card to the .deck container
-
-    Step 3: Add interactivity
-    - After creating the HTML elemetns, add at least one event listener to each card
-    - Some ideas: click to flip, highlight, show more info, etc.
-*/
 
 function displayCards(cards) {
     for (let i = 0; i < cards.length; i++) {
-        // Your code here for Step 2 + 3
+        let card = document.createElement('div');
+        card.classList.add('card');
+
+        let img = document.createElement('img');
+        img.src = cards[i].image;
+        img.alt = cards[i].name;
+
+        let name = document.createElement('h2');
+        name.textContent = cards[i].name;
+
+        let series = document.createElement('p');
+        series.textContent = "Series: " + cards[i].series;
+
+        let trait = document.createElement('p');
+        trait.textContent = "Trait: " + cards[i].trait;
+
+        card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(series);
+        card.appendChild(trait);
+
+        card.addEventListener('click', function () {
+            card.classList.toggle('active');
+        });
+
+        deck.appendChild(card);
     }
 }
 
-
-
-// DO NOT TOUCH (Starts loading the data)
 getCards();
