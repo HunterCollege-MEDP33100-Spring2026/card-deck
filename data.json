@@ -1,7 +1,27 @@
 [
     {
-        "name": "Card Name",
-        "description": "Card description goes here.",
-        "image": "images/placeholder.png"
+        "name": "Card 1",
+        "description": "Food Pantry Card.",
+        "image": "images/card1.png",
+        "fact": "Yay!"
+    },
+    {
+        "name": "Card 2",
+        "description": "Snack Attack Card.",
+        "image": "images/card2.png",
+        "fact": "Yay!"
+    },
+    {
+        "name": "Card 3",
+        "description": "Food Pantry Card.",
+        "image": "images/card1.png",
+        "fact": "Yay!"
+    },
+     {
+        "name": "Card 4",
+        "description": "Snack Attack Card.",
+        "image": "images/card2.png",
+        "fact": "Yay!"
     }
+
 ]

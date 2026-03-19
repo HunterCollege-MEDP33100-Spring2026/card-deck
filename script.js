@@ -9,6 +9,10 @@ const deck = document.querySelector('.deck');
 
 function getCards() {
     // Your code here for Step 1
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => displayCards(data))
+        .catch(error => console.error('Error fetching cards:', error))
 }
 
 
@@ -26,6 +30,37 @@ function getCards() {
 function displayCards(cards) {
     for (let i = 0; i < cards.length; i++) {
         // Your code here for Step 2 + 3
+        const card = cards[i];
+
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('card');
+
+        const title = document.createElement('h2');
+        title.textContent = card.name;
+
+        const type = document.createElement('p');
+        type.textContent = card.type || card.number || '';
+
+        const img = document.createElement('img');
+        img.src = card.image;
+        img.alt = card.name;
+
+        const info = document.createElement('p');
+        info.textContent = card.fact || card.meaning || '';
+        info.classList.add('hidden');
+
+        cardDiv.addEventListener('click', () => {
+            info.classList.toggle('hidden');
+            cardDiv.classList.toggle('active');
+        });
+
+        cardDiv.appendChild(title);
+        cardDiv.appendChild(type);
+        cardDiv.appendChild(img);
+        cardDiv.appendChild(info);
+
+        deck.appendChild(cardDiv);
+
     }
 }
 
