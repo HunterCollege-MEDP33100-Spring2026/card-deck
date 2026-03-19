@@ -1,7 +1,26 @@
 [
     {
-        "name": "Card Name",
-        "description": "Card description goes here.",
-        "image": "images/placeholder.png"
-    }
+        "name": "Biryani",
+        "country": "Bengali",
+        "image": "images/img03.jpg",
+        "description": "A rich and aromatic rice dish cooked with basmati rice, tender chicken or beef, and a blend of spices like saffron, cardamom, and cloves. Often served with boiled eggs and salad."
+    },
+    {
+        "name": "Sushi",
+        "country": "Japanese",
+        "image": "images/img04.jpeg",
+        "description": "A traditional Japanese dish made with vinegared rice, fresh seafood, and vegetables. It comes in many forms like rolls, nigiri, and sashimi, often served with soy sauce and wasabi."
+    },
+    {
+        "name": "Bibimbap",
+        "country": "Korean",
+        "image": "images/img05.jpg",
+        "description": "A colorful Korean rice bowl topped with assorted vegetables, marinated beef or seafood, a fried egg, and spicy gochujang sauce. Everything is mixed together before eating."
+  },
+    {
+        "name": "Chinese Take Out",
+        "country": "Chinese",
+        "image": "images/img06.jpg",
+        "description":  "A variety of popular Chinese dishes like fried rice, noodles, orange chicken, and beef with broccoli, typically served in convenient takeaway boxes full of bold flavors."
+  }
 ]

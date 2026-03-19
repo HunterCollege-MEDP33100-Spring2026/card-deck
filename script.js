@@ -1,35 +1,49 @@
 const deck = document.querySelector('.deck');
 
-/*
-    Step 1: Fetch data from your JSON file by:
-    - Inside of the getCards() function, use fetch() to load data.json
-    - Convert the response to JavaScript using .json()
-    - Call displayCards() with the data
-*/
-
-function getCards() {
-    // Your code here for Step 1
+/* Fetch JSON */
+function getData() {
+    fetch('data.json')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            displayCards(data);
+        });
 }
 
+getData();
 
-/*
-    Step 2: Display the cards
-    - Inside the for loop, loop through the array of card objects
-    - For each card, create HTML elements (using div, p, img, etc.)
-    - Append each card to the .deck container
+/* Display Cards */
+function displayCards(data) {
+    for (let i = 0; i < data.length; i++) {
 
-    Step 3: Add interactivity
-    - After creating the HTML elemetns, add at least one event listener to each card
-    - Some ideas: click to flip, highlight, show more info, etc.
-*/
+        const card = document.createElement('div');
+        card.classList.add('card');
 
-function displayCards(cards) {
-    for (let i = 0; i < cards.length; i++) {
-        // Your code here for Step 2 + 3
+        const name = document.createElement('h2');
+        name.textContent = data[i].name;
+
+        const country = document.createElement('p');
+        country.textContent = data[i].country;
+
+        const img = document.createElement('img');
+        img.src = data[i].image;
+
+        const desc = document.createElement('p');
+        desc.textContent = data[i].description;
+        desc.classList.add('hidden');
+
+        card.appendChild(name);
+        card.appendChild(img);
+        card.appendChild(country);
+        card.appendChild(desc);
+
+        deck.appendChild(card);
+
+        /* Interactivity (click to show/hide description) */
+        card.addEventListener('click', function() {
+            desc.classList.toggle('hidden');
+            card.classList.toggle('active');
+        });
     }
 }
-
-
-
-// DO NOT TOUCH (Starts loading the data)
-getCards();
