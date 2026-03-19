@@ -1,35 +1,62 @@
 const deck = document.querySelector('.deck');
 
 /*
-    Step 1: Fetch data from your JSON file by:
-    - Inside of the getCards() function, use fetch() to load data.json
-    - Convert the response to JavaScript using .json()
-    - Call displayCards() with the data
+    Step 1: Fetch data from JSON
 */
-
 function getCards() {
-    // Your code here for Step 1
+    fetch("data.json")
+        .then(response => response.json())
+        .then(data => {
+            displayCards(data);
+        })
+        .catch(error => console.log("Error:", error));
 }
 
 
 /*
-    Step 2: Display the cards
-    - Inside the for loop, loop through the array of card objects
-    - For each card, create HTML elements (using div, p, img, etc.)
-    - Append each card to the .deck container
-
-    Step 3: Add interactivity
-    - After creating the HTML elemetns, add at least one event listener to each card
-    - Some ideas: click to flip, highlight, show more info, etc.
+    Step 2 + 3: Display cards + add interactivity
 */
-
 function displayCards(cards) {
     for (let i = 0; i < cards.length; i++) {
-        // Your code here for Step 2 + 3
+
+        // create card container
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("card");
+
+        // create elements
+        const name = document.createElement("h3");
+        name.textContent = cards[i].name;
+
+        const img = document.createElement("img");
+        img.src = cards[i].image;
+
+        const desc = document.createElement("p");
+        desc.textContent = cards[i].description;
+
+        // hide description at first
+        desc.style.display = "none";
+
+        // add elements to card
+        cardDiv.appendChild(name);
+        cardDiv.appendChild(img);
+        cardDiv.appendChild(desc);
+
+        /*
+            Step 3: Interactivity
+            Click to show/hide description
+        */
+        cardDiv.addEventListener("click", function () {
+            if (desc.style.display === "none") {
+                desc.style.display = "block";
+            } else {
+                desc.style.display = "none";
+            }
+        });
+
+        // add card to deck
+        deck.appendChild(cardDiv);
     }
 }
 
-
-
-// DO NOT TOUCH (Starts loading the data)
+// call the function
 getCards();

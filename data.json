@@ -1,7 +1,17 @@
 [
-    {
-        "name": "Card Name",
-        "description": "Card description goes here.",
-        "image": "images/placeholder.png"
-    }
+  {
+    "name": "Rose",
+    "description": "A red flower that represents love and romance.",
+    "image": "images/rose.jpg"
+  },
+  {
+    "name": "Sunflower",
+    "description": "A bright yellow flower that follows the sun.",
+    "image": "images/sunflower.jpg"
+  },
+  {
+    "name": "Tulip",
+    "description": "A colorful spring flower that symbolizes happiness.",
+    "image": "images/tulip.jpg"
+  }
 ]

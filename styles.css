@@ -1,28 +1,66 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+  background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffd1dc);
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Container for all the cards */
 .deck {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* Style your cards here */
 .card {
+  width: 160px;
+  padding: 10px;
+  border: 2px solid pink;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.deck img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* keeps images from stretching weird */
+  border-radius: 10px;
+} 
+.deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
 }
