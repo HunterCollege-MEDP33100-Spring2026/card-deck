@@ -7,24 +7,15 @@ const deck = document.querySelector('.deck');
     - Call displayCards() with the data
 */
 
-// async function getCards() {
-//     // Your code here for Step 1
-//     const cards = await fetch('data.json');
-//     console.log(data);
-//     const displayCards = await data.json();
-//     console.log(displayCards);
-// }
-
 async function getCards() {
-    const response = await fetch('data.json');
-    const data = await response.json();
-
+    // Your code here for Step 1
+    const data = await fetch('data.json');
     console.log(data);
-
-    displayCards(data);
+    const cardDeck = await data.json();
+    console.log(cardDeck);
+    displayCards(cardDeck);
 }
 
-getCards();
 
 
 /*
@@ -38,36 +29,43 @@ getCards();
     - Some ideas: click to flip, highlight, show more info, etc.
 */
 
+const deckElement = document.querySelector('.deck');
+
+
 
 function displayCards(cards) {
-
-    deck.innerHTML = "";
     for (let i = 0; i < cards.length; i++) {
+        const name = cards[i].name;
+        console.log(name);
+        const description = cards[i].description;
+        console.log(description);
+        const image = cards[i].image;
 
-        const card = document.createElement('div');
-        card.classList.add('card');
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
 
-        const title = document.createElement('h3');
-        title.textContent = cards[i].name;
 
-        const description = document.createElement('p');
-        description.textContent = cards[i].description;
+        // create a p element for the card name card description 
+        const cardNameElement = document.createElement('p');
+        cardNameElement.textContent = name;
 
-        const img = document.createElement('img');
-        img.src = cards[i].image;
+        const cardDescriptionElement = document.createElement('p');
+        cardDescriptionElement.textContent = description;
+        cardElement.appendChild(cardNameElement);
+        cardElement.appendChild(cardDescriptionElement);
 
-        card.appendChild(img);
-        card.appendChild(title);
-        card.appendChild(description);
 
-        deck.appendChild(card);
+        const cardImageElement = document.createElement('img');
+        cardImageElement.src = image;
+        cardElement.appendChild(cardImageElement);
 
-        // Interactivity
-        card.addEventListener('click', function () {
-            card.classList.toggle('active');
-        });
+        // add append the element to card element
+
+        deckElement.appendChild(cardElement)
+
     }
 }
+
 
 
 // DO NOT TOUCH (Starts loading the data)
