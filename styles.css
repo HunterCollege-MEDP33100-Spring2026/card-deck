@@ -1,28 +1,93 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* styles the whole page background and default text */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: #111827;
+    color: white;
+    text-align: center;
+    margin: 0;
     padding: 20px;
 }
 
+/* styles the title at the top */
 h1 {
-    text-align: center;
+    margin-bottom: 10px;
+    font-family: "Bitcount Grid Double Ink", system-ui;
+    font-size: 50px;
+
+
+}
+
+/* styles the short instruction text under the title */
+p {
     margin-bottom: 20px;
 }
 
-/* Container for all the cards */
+/* this is the container that holds all the cards */
 .deck {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 250px));
+    gap: 20px;
     justify-content: center;
+    margin-top: 30px;
 }
 
-/* Style your cards here */
+/* this styles each individual card */
 .card {
+    background: white;
+    color: black;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    /* shows the user that the card can be clicked */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    /* smooth animation when the card changes */
+}
 
+/* this styles the image inside each card */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    /* makes the image fill the card nicely */
+    border-radius: 12px;
+}
+
+/* this styles the card title */
+.card h2 {
+    margin: 12px 0 8px;
+    font-size: 1.3rem;
+}
+
+/* this styles the card number */
+.card-number {
+    font-weight: bold;
+    color: #cd2350;
+    margin-bottom: 10px;
+}
+
+/* by default, hide the description text */
+.description {
+    display: none;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* when the user hovers over a card, lift it slightly */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* when a card is clicked and gets the "active" class */
+.card.active {
+    background: #dbeafe;
+    /* changes the background color */
+    transform: scale(1.03);
+    /* makes the card slightly bigger */
+}
+
+/* when the card is active, show the hidden description */
+.card.active .description {
+    display: block;
 }

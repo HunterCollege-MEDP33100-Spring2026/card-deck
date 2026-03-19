@@ -1,7 +1,38 @@
 [
     {
-        "name": "Card Name",
-        "description": "Card description goes here.",
-        "image": "images/placeholder.png"
+        "name": "The Little Prince",
+        "number": "I",
+        "image": "images/prince.jpg",
+        "description": "A curious traveler who sees the world with innocence and imagination."
+    },
+    {
+        "name": "The Fox",
+        "number": "II",
+        "image": "images/fox.png",
+        "description": "The fox represents friendship, trust, and emotional connection."
+    },
+    {
+        "name": "The Rose",
+        "number": "III",
+        "image": "images/rose.jpg",
+        "description": "The rose represents love, beauty, and responsibility."
+    },
+    {
+        "name": "The Snake",
+        "number": "IV",
+        "image": "images/snake.png",
+        "description": "The snake represents mystery, danger, and transformation."
+    },
+    {
+        "name": "The Stars",
+        "number": "V",
+        "image": "images/stars.jpg",
+        "description": "The stars represent wonder, dreams, and infinite possibility."
+    },
+    {
+        "name": "The Planet",
+        "number": "VI",
+        "image": "images/planet.png",
+        "description": "The planet represents home, memory, and personal beginnings."
     }
 ]
