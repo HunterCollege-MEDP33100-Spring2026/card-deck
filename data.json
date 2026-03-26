@@ -1,7 +1,20 @@
 [
-    {
-        "name": "Card Name",
-        "description": "Card description goes here.",
-        "image": "images/placeholder.png"
-    }
+  {
+    "name": "The Sun",
+    "type": "Planet",
+    "fact": "Bright and powerful",
+    "image": "https://via.placeholder.com/200x120?text=Sun"
+  },
+  {
+    "name": "The Moon",
+    "type": "Planet",
+    "fact": "Quiet and mysterious",
+    "image": "https://via.placeholder.com/200x120?text=Moon"
+  },
+  {
+    "name": "Mars",
+    "type": "Planet",
+    "fact": "Known as the red planet",
+    "image": "https://via.placeholder.com/200x120?text=Mars"
+  }
 ]
