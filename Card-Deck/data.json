@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Mercury",
+    "number": "01",
+    "type": "Rocky Planet",
+    "fact": "Mercury is the closest planet to the Sun.",
+    "image": "images/mercury.png"
+  },
+  {
+    "name": "Venus",
+    "number": "02",
+    "type": "Rocky Planet",
+    "fact": "Venus is the hottest planet in our solar system.",
+    "image": "images/venus.png"
+  },
+  {
+    "name": "Earth",
+    "number": "03",
+    "type": "Home Planet",
+    "fact": "Earth is the only planet known to support life.",
+    "image": "images/earth.png"
+  },
+  {
+    "name": "Mars",
+    "number": "04",
+    "type": "Rocky Planet",
+    "fact": "Mars is called the Red Planet.",
+    "image": "images/mars.png"
+  },
+  {
+    "name": "Jupiter",
+    "number": "05",
+    "type": "Gas Giant",
+    "fact": "Jupiter is the largest planet in our solar system.",
+    "image": "images/jupiter.png"
+  }
+]
